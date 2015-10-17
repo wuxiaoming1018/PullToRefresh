@@ -3,16 +3,16 @@
 ========================================================
 # layout中：
 -----------------------------------------------------------
-       <         <com.quanquan.pulltorefresh.view.RefreshListView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/refreshListView">
+                <com.quanquan.pulltorefresh.view.RefreshListView
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/refreshListView">
 
                 </com.quanquan.pulltorefresh.view.RefreshListView>
-        >
+        
 # activity中:
 -----------------------------------------------------
- <       refreshListView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
+              refreshListView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
                     @Override
                     public void onPullRefresh() {
                         //需要请求联网的数据库，然后更新UI
@@ -24,10 +24,10 @@
                         requestDataFromServer(true);
                     }
                 });    
-                >
+                
 # 请求数据成功后：
 -------------------------------------------
-    <    private Handler handler = new Handler() {
+              private Handler handler = new Handler() {
                 @Override
                 public void handleMessage(Message msg) {
                     adapter.notifyDataSetChanged();
@@ -35,4 +35,4 @@
                     refreshListView.completeRefresh();
                 }
             };
-            >
+            
