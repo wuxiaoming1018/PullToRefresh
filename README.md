@@ -1,7 +1,7 @@
 # PullToRefresh
-下拉刷新上拉加载更多
+    下拉刷新  上拉加载更多
 ========================================================
-# layout中：
+### layout中：
 -----------------------------------------------------------
                 <com.quanquan.pulltorefresh.view.RefreshListView
                      android:layout_width="match_parent"
@@ -10,7 +10,7 @@
 
                 </com.quanquan.pulltorefresh.view.RefreshListView>
         
-# activity中:
+### activity中:
 -----------------------------------------------------
               refreshListView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
                     @Override
@@ -25,7 +25,7 @@
                     }
                 });    
                 
-# 请求数据成功后：
+### 请求数据成功后：
 -------------------------------------------
               private Handler handler = new Handler() {
                 @Override
